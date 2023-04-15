@@ -1,0 +1,31 @@
+<div class="bg-gray-900 h-screen">
+  <div class="bg-gray-900 h-fit">
+    <div class="p-4">
+      <h1 class="text-center text-2xl sm:text-4xl font-extrabold text-white">
+        Algorithm Quiz Report
+      </h1>
+    </div>
+    <div class="flex justify-center">
+      <table class="mb-5">
+        <thead class="text-white sm:text-xl font-bold bg-blue-950">
+          <th>Roll Number</th>
+          <th>Total Correct Questions</th>
+          <th>Total Quiz Points</th>
+        </thead>
+        <tbody>
+          <tr
+            class="text-red-600 sm:text-xl font-bold hover:bg-slate-950 hv"
+            *ngFor="let item of js"
+          >
+            <td>{{ item.rollno }}</td>
+            <td>
+              {{ item.totalCorrectQuestions }}
+              <span class="text-blue-600">/ total</span>
+            </td>
+            <td>{{ item.totalQuizPoints }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

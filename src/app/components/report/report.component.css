@@ -1,0 +1,17 @@
+table,
+th,
+td,
+tr {
+  border-bottom: 0.1rem solid wheat;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+tr {
+  transition: 0.3s;
+}
