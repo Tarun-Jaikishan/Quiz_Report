@@ -1,3 +1,10 @@
+<button
+  class="z-20 fixed bg-yellow-600 font-mono hover:bg-yellow-500 text-white mt-5 ml-5 p-3 rounded-md"
+  (click)="deleteAll()"
+>
+  Delete All
+</button>
+
 <div class="bg-gray-900 h-screen">
   <div class="bg-gray-900 h-fit">
     <div class="p-4">
@@ -11,18 +18,25 @@
           <th>Roll Number</th>
           <th>Total Correct Questions</th>
           <th>Total Quiz Points</th>
+          <th>Delete Response</th>
         </thead>
         <tbody>
           <tr
             class="text-red-600 sm:text-xl font-bold hover:bg-slate-950 hv"
             *ngFor="let item of js"
           >
-            <td>{{ item.rollno }}</td>
+            <td>{{ item.rollNo }}</td>
             <td>
               {{ item.totalCorrectQuestions }}
-              <span class="text-blue-600">/ total</span>
+              <span class="text-blue-600">/ 30</span>
             </td>
             <td>{{ item.totalQuizPoints }}</td>
+            <button
+              class="text-white font-mono p-2 mt-2 bg-yellow-600 hover:bg-yellow-500 rounded-md"
+              (click)="deleteInduvidual(item._id)"
+            >
+              Delete
+            </button>
           </tr>
         </tbody>
       </table>
