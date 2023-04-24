@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./report.component.css'],
 })
 export class ReportComponent {
-  getApi = 'http://localhost:3000/results'; // API url
+  getApi = 'https://shy-rose-octopus-fez.cyclic.app/results'; // API url
 
   data: any;
 
